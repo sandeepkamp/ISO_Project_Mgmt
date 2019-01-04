@@ -119,7 +119,7 @@
                     </li>
 
                     <li id="removable">
-                        <a class="has-arrow" href="#" aria-expanded="false"><img src="{{asset('img/sidebar/home3.png')}}" alt="" style="padding: 6px;"><span class="mini-click-non">Certificaton Info</span></a>
+                        <a class="has-arrow" href="#" aria-expanded="false"><img src="{{asset('img/sidebar/home3.png')}}" alt="" style="padding: 6px;"><span class="mini-click-non">Certificaton Body</span></a>
                         <ul class="submenu-angle" aria-expanded="false">
                             <li><a title="ISO Service List" href="{{ route('certifications.index') }}">
                             <img src="{{asset('img/sidebar/show-all-body.png')}}" alt="" style="padding: 8px;"><span class="mini-click-non">Show All Body</span></a></li>
@@ -130,7 +130,7 @@
 
                     <li id="removable">
                         <a class="has-arrow" href="#" aria-expanded="false">
-                        <img src="{{asset('img/sidebar/home4.png')}}" alt="" style="padding: 6px;"><span class="mini-click-non">Audit Management</span></a>
+                        <img src="{{asset('img/sidebar/home4.png')}}" alt="" style="padding: -1px;"><span class="mini-click-non">Audit Management</span></a>
                         <ul class="submenu-angle" aria-expanded="false">
                             <li><a title="ISO Service List" href="{{ route('auditmanagement.index') }}">
                             <img src="{{asset('img/sidebar/show-details.png')}}" alt="" style="padding: 8px;"><span class="mini-click-non">Show Details</span></a></li>
@@ -153,8 +153,8 @@
                         <ul class="submenu-angle" aria-expanded="false">
                             <li><a title="ISO Service List" href="{{ route('auditinfo.index') }}">
                             <img src="{{asset('img/sidebar/show-all-audit-info.png')}}" alt="" style="padding: 8px;"><span class="mini-click-non">Show All Audit Information</span></a></li>
-                            <li><a title="Add New Service" href="{{ route('auditinfo.create') }}">
-                            <img src="{{asset('img/sidebar/add-new-information.png')}}" alt="" style="padding: 8px;"><span class="mini-click-non">Add New Information</span></a></li>
+                            <!-- <li><a title="Add New Service" href="{{ route('auditinfo.create') }}">
+                            <img src="{{asset('img/sidebar/add-new-information.png')}}" alt="" style="padding: 8px;"><span class="mini-click-non">Add New Information</span></a></li> -->
                         </ul>
                     </li>
 
@@ -172,12 +172,12 @@
                     <li id="removable">
                         <a class="has-arrow" href="#" aria-expanded="false">
                         <img src="{{asset('img/sidebar/home6.png')}}" alt="" style="padding: 6px;"><span class="mini-click-non">Upcoming Audits</span></a>
-                        <ul class="submenu-angle" aria-expanded="false">
+                        <!-- <ul class="submenu-angle" aria-expanded="false">
                             <li><a title="Login" href="login.html"><i class="fa fa-hand-rock-o sub-icon-mg" aria-hidden="true"></i><span class="mini-sub-pro">Login</span></a></li>
                             <li><a title="Register" href="register.html"><i class="fa fa-plane sub-icon-mg" aria-hidden="true"></i><span class="mini-sub-pro">Register</span></a></li>
                             <li><a title="Lock" href="lock.html"><i class="fa fa-file sub-icon-mg" aria-hidden="true"></i><span class="mini-sub-pro">Lock</span></a></li>
                             <li><a title="Password Recovery" href="password-recovery.html"><i class="fa fa-wheelchair sub-icon-mg" aria-hidden="true"></i><span class="mini-sub-pro">Password Recovery</span></a></li>
-                        </ul>
+                        </ul> -->
                     </li>
                     <!-- <li><a title="Landing Page" href="#" aria-expanded="false"><i class="fa fa-bookmark icon-wrap sub-icon-mg" aria-hidden="true"></i> <span class="mini-click-non">Landing Page</span></a></li> -->
                 </ul>

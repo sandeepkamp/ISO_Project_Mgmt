@@ -95,7 +95,7 @@
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label class="bmd-label-floating">Next Audit Date</label>
-                        <input type="date" class="form-control" id="next_audit_date" name="next_audit_date" value="">
+                        <input type="date" class="form-control" id="next_audit_date" name="next_audit_date" value="{{ $audit->next_audit_date }}">
                     </div>
                 </div>
                 <div class="col-sm-6">

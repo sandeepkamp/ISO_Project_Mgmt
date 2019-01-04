@@ -1,17 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2></h2>
-            </div>
+<h2 style="padding: 2px;">Audit Management</h2>
+<div class="row">
+    
+        <div class="col-lg-12 margin-tb"> 
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('auditmanagement.create') }}"> Create New</a>
             </div>
         </div>
     </div>
-
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
             <p>{{ $message }}</p>

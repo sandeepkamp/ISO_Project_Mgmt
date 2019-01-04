@@ -129,7 +129,7 @@
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label class="bmd-label-floating">Certification Date</label>
-                        <input type="date" class="form-control" name="certification_date" value="<?php echo date("Y-m-d");?>">
+                        <input type="date" class="form-control" name="certification_date" value="<?php ("Y-m-d");?>">
                     </div>
                 </div>
             </div>

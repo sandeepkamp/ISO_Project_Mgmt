@@ -66,7 +66,7 @@
                <div class="col-sm-6">
                <div class="form-group">
                      <label class="bmd-label-floating">Last Audit Date</label>
-                     <input type="date" class="form-control" name="last_audit_date" value="">
+                     <input type="date" class="form-control" id="last_audit_date" name="last_audit_date" value="">
                 </div>
                </div>
                <div class="col-sm-6">
@@ -81,7 +81,7 @@
                <div class="col-sm-6">
                <div class="form-group">
                      <label class="bmd-label-floating">Next Audit Date</label>
-                     <input type="date" class="form-control" name="next_audit_date" value="">
+                     <input type="date" class="form-control" id="last_audit_date" name="next_audit_date" value="">
                 </div>
                </div>
                <div class="col-sm-6">

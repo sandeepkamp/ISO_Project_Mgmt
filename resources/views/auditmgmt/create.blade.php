@@ -57,13 +57,13 @@
         </div>
      </div>
      <div class="row">
-         <div class="col-sm-4">
+         <div class="col-sm-3">
              <div class="form-group">
                  <label class="bmd-label-floating">Audit Date</label>
                  <input type="date" class="form-control" name="audit_date"  id="audit_date" value="">
              </div>
          </div>
-         <div class="col-sm-4">
+         <div class="col-sm-3">
              <div class="form-group">
                  <label class="bmd-label-floating">Audit Type</label>
                      <input type="text" class="form-control" name="audit_type" value="Certification" readonly>
@@ -85,7 +85,7 @@
             <select id="select_status" name="status" class="form-control">
                 <option>Select Audit Status</option><!--selected by default-->
                 <option value="audit_pending">Audit Pending</option>
-                <option id ="2" value="audit_in_process">Audit In Process</option>
+                <!-- <option id ="2" value="audit_in_process">Audit In Process</option> -->
                 <option id ="3" value="audit_done">Audit Done</option>
             </select>
         </div>
@@ -94,10 +94,10 @@
     <div class="row">
         <div class="col-md-6 col-sm-6 col-md-6">
             <label class="bmd-label-floating">Certification Body Name</label>
-            <select name="certification_name" class="form-control">
-                <option>Select Certification Body</option><!--selected by default-->
+            <select name="certification_name" id="certification_name"  class="form-control">
+                <option>Select Certification Body->Accreditation</option><!--selected by default-->
                 @foreach ($certifications as $certification)
-                    <option value="{{ $certification->id }}">{{ $certification->certification_body_name }}</option>
+                    <option value="{{ $certification->id }}">{{ $certification->certification_body_name }}->{{ $certification->accreditation }}</option>
                 @endforeach
             </select>
         </div>
@@ -131,3 +131,5 @@
    
 </form>
 @endsection
+
+

@@ -34,57 +34,45 @@ class AuditInfoController extends Controller
     }
 
 
-    // public function update(Request $request, $id)
-    // {
-    //     $audit = AuditInfo::findOrFail($id);
+    public function update(Request $request, $id)
+    {
+        $audit = AuditInfo::findOrFail($id);
 
-    //     $this->validate($request, [
+        $this->validate($request, [
 
-    //      'certification_body',
-    //         'accreditation',
-    //         'last_audit_date',
-    //         'last_audit_type',
-    //         'next_audit_date',
-    //         'next_audit_type',
-    //     ]);
+         'certification_body',
+            'accreditation',
+            'last_audit_date',
+            'last_audit_type',
+            'next_audit_date',
+            'next_audit_type',
+        ]);
 
-    //     $audit->update($request->all());
+        $audit->update($request->all());
 
-    //     if($audit->last_audit_type == 'certification')
-    //     {
-    //         $audit->next_audit_type = 'first_surveillance';
-    //         // $audit['last_audit_date'];
-    //         // $end = date('Y-m-d', strtotime('+1 years'));
-    //         // // $renewalDate  = $dt->format('d F Y'); 
-    //         // $audit->next_audit_date = $end ;
-    //         $audit->save();
-    //     }
-
-
-    //     if($audit->last_audit_type == 'first_surveillance')
-    //     {
-    //         $audit->next_audit_type = 'second_surveillance';
-    //         // $dt1 = $audit['last_audit_date'];
-    //         // $end1 = date('Y-m-d', strtotime('+1 years'));
-    //         // // $renewalDate  = $dt->format('d F Y'); 
-    //         // $audit->next_audit_date = $end1 ;
-    //         $audit->save();
-    //     }
+        if($audit->last_audit_type == 'first_surveillance')
+        {
+            $audit->next_audit_type = 'second_surveillance';
+            $date = date('Y-m-d', strtotime($_POST['last_audit_date']. '+ 364 day'));
+           // dd($date);
+           $audit->next_audit_date = $date ; 
+            $audit->save();
+        }
 
 
 
-    //     if($audit->last_audit_type == 'second_surveillance')
-    //     {
-    //         $audit->next_audit_type = 'recertification';
-    //         // $dt2 = $audit['last_audit_date'];
-    //         // $end2 = date('Y-m-d', strtotime('+1 years'));
-    //         // // $renewalDate  = $dt->format('d F Y'); 
-    //         // $audit->next_audit_date = $end2 ;
-    //         $audit->save();
-    //     }
+        if($audit->last_audit_type == 'second_surveillance')
+        {
+            $audit->next_audit_type = 'recertification';
+            // $dt2 = $audit['last_audit_date'];
+            // $end2 = date('Y-m-d', strtotime('+1 years'));
+            // // $renewalDate  = $dt->format('d F Y'); 
+            // $audit->next_audit_date = $end2 ;
+            $audit->save();
+        }
 
-    //     return redirect()->route('auditinfo.index', ['id' => $audit->id]);
-    // }
+        return redirect()->route('auditinfo.index', ['id' => $audit->id]);
+    }
 
 
     /**

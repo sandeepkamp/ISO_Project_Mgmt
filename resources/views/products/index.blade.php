@@ -1,10 +1,12 @@
 @extends('layouts.app')
  
 @section('content')
-<h2>ISO Service List</h2>
-    <div class="row">
+<h2 style="padding: 2px;">ISO List</h2>
+<div class="row">
+    
+        <div class="col-lg-12 margin-tb"> 
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('products.create') }}"> Create New </a>
+                <a class="btn btn-success" href="{{ route('products.create') }}"> Create New</a>
             </div>
         </div>
     </div>

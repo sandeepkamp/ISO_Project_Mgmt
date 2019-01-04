@@ -33,7 +33,7 @@ class AuditManagementController extends Controller
     {
         $customers =DB::table('customers')->select('id','cust_name')->get();
         $products =DB::table('products')->select('id','name')->get();
-        $certifications = DB::table('certification_bodies')->select('id','certification_body_name')->get();
+        $certifications = DB::table('certification_bodies')->select('id','certification_body_name','accreditation')->get();
         return view('auditmgmt.create', compact('customers','products','certifications'));
     }
 

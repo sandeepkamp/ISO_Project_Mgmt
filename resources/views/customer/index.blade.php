@@ -1,15 +1,20 @@
 @extends('layouts.app')
  
 @section('content')
-   
+<h2 style="padding: 2px;">Costumer Lists</h2>
+<div class="row">
+    
+        <div class="col-lg-12 margin-tb"> 
+            <div class="pull-right">
+                <a class="btn btn-success" href="{{ route('customer.create') }}"> Create New</a>
+            </div>
+        </div>
+    </div>
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
             <p>{{ $message }}</p>
         </div>
-    @endif
-    <div class="row" style="margin-right: 330px;">
-    <h1 style="padding-left: 17px;">Customer List</h1><br>
-    </div>
+    @endif    
     <table class="table table-bordered">
         <tr>
             <th>Customer Name</th>
